@@ -38,5 +38,10 @@ void main() {
       expect(Recursions().findIndexes([5, 4, 5, 8, 5, 1], 5, [], 0), [0, 2, 4]);
       expect(Recursions().findIndexes([5, 4, 5, 8, 5, 1], 2, [], 0), []);
     });
+
+    test("Find multiple targets in array 2", () {
+      expect(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 5, 0), [0, 2, 4]);
+      expect(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 2, 0), []);
+    });
   });
 }

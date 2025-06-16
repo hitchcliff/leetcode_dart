@@ -34,8 +34,27 @@ class Recursions {
 
     return findIndexes(arr, target, list, i + 1);
   }
+
+  List<int> findIndexes2(List arr, int target, int i) {
+    List<int> list = [];
+
+    if (i > arr.length - 1) {
+      return list;
+    }
+
+    if (arr[i] == target) {
+      list.add(i);
+    }
+
+    List<int> answers = findIndexes2(arr, target, i + 1);
+
+    list.addAll(answers);
+
+    return list;
+  }
 }
 
 main() {
   // print(Recursions().sortedOrNot([1, 2, 3, 4, 5, 8, 10, 1], 0));
+  print(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 5, 0));
 }
