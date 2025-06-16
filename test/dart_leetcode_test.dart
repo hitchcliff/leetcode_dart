@@ -24,6 +24,19 @@ void main() {
     test('Sorted array or not', () {
       expect(Recursions().sortedOrNot([1, 2, 3, 4, 5, 8, 10, 12], 0), isTrue);
       expect(Recursions().sortedOrNot([1, 2, 4, 8, 3, 10, 12], 0), isFalse);
+      expect(Recursions().sortedOrNot([1, 2, 3, 4, 5, 8, 10, 1], 0), isFalse);
+    });
+
+    test('Find target in array', () {
+      expect(Recursions().findIndex([1, 2, 3, 4, 5, 8, 10, 12], 12, 0), 7);
+      expect(Recursions().findIndex([1, 2, 4, 8, 3, 10, 12], 8, 0), 3);
+      expect(Recursions().findIndex([1, 2, 3, 4, 5, 8, 10, 1], 3, 0), 2);
+      expect(Recursions().findIndex([1, 2, 3, 4, 5, 8, 10, 1], 100, 0), -1);
+    });
+
+    test("Find multiple targets in array", () {
+      expect(Recursions().findIndexes([5, 4, 5, 8, 5, 1], 5, [], 0), [0, 2, 4]);
+      expect(Recursions().findIndexes([5, 4, 5, 8, 5, 1], 2, [], 0), []);
     });
   });
 }
