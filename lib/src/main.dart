@@ -1,12 +1,11 @@
-class Awesome {
-  bool get isAwesome => true;
+import 'package:dart_leetcode/src/1.%20Two%20Sums.dart';
+import 'package:dart_leetcode/src/dart_lists.dart';
+import 'package:dart_leetcode/src/dart_maps.dart';
 
-  /// Sum factorial
-  static int factorial(n) {
-    if (n == 0) {
-      return n;
-    }
+void main() {
+  print(twoSums([2, 5, 5, 11, 12], 10, {}, 0));
 
-    return n + factorial(n - 1);
-  }
+  // Learning dart
+  // DartLists().lists();
+  // DartMaps().maps();
 }
