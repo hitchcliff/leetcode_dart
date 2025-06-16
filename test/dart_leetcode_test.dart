@@ -1,5 +1,6 @@
-import 'package:dart_leetcode/src/1.%20Two%20Sums.dart';
+import 'package:dart_leetcode/src/solutions/1.%20Two%20Sums.dart';
 import 'package:dart_leetcode/src/factorial.dart';
+import 'package:dart_leetcode/src/solutions/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -12,6 +13,11 @@ void main() {
 
     test("1. Two Sums", () {
       expect(twoSums([2, 5, 5, 11, 12], 10, {}, 0), containsAll([1, 2]));
+    });
+
+    test('1342. Number of Steps to Reduce a Number to Zero', () {
+      expect(Solution().numberOfSteps(14), 6); // 6 steps
+      expect(Solution().numberOfSteps(8), 4); // 4 steps
     });
   });
 }
