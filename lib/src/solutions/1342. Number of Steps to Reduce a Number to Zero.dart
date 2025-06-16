@@ -1,21 +1,17 @@
 class Solution {
-  int i = 0;
-  List steps = [];
-
+  int steps = 0;
   int numberOfSteps(int num) {
     if (num < 1) {
-      return steps.length;
+      return steps;
     }
-
-    i++;
 
     // even
     if (num % 2 == 0) {
-      steps.add('Step $i) $num is even; divide by 2 and obtain ${num / 2}');
+      steps = steps + 1;
       return numberOfSteps((num / 2).toInt());
     }
 
-    steps.add('Step $i) $num is odd; subtract by 1 and obtain ${num - 1}');
+    steps = steps + 1;
     return numberOfSteps(num - 1);
   }
 }
