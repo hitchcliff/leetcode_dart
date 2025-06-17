@@ -2,6 +2,7 @@ import 'package:dart_leetcode/src/recursions/recursions.dart';
 import 'package:dart_leetcode/src/solutions/1.%20Two%20Sums.dart';
 import 'package:dart_leetcode/src/factorial.dart';
 import 'package:dart_leetcode/src/solutions/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.dart';
+import 'package:dart_leetcode/src/solutions/33.%20Search%20in%20Rotated%20Sorted%20Array.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -42,6 +43,12 @@ void main() {
     test("Find multiple targets in array 2", () {
       expect(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 5, 0), [0, 2, 4]);
       expect(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 2, 0), []);
+    });
+
+    test("33. Search in Rotated Sorted Array", () {
+      expect(searchInRotatedSortedArray([4, 5, 6, 7, 0, 1, 2], 0), 4);
+      expect(searchInRotatedSortedArray([4, 5, 6, 7, 0, 1, 2], 3), -1);
+      expect(searchInRotatedSortedArray([1], 0), -1);
     });
   });
 }
