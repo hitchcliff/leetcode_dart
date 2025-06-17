@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Recursions {
   arrays() {
     print("Hello world");
@@ -52,9 +54,24 @@ class Recursions {
 
     return list;
   }
+
+  triangle(int row, int col) {
+    if (row == 0) {
+      return;
+    }
+
+    if (row > col) {
+      stdout.write("*");
+      triangle(row, col + 1);
+    } else {
+      stdout.write("\n");
+      triangle(row - 1, 0);
+    }
+  }
 }
 
 main() {
   // print(Recursions().sortedOrNot([1, 2, 3, 4, 5, 8, 10, 1], 0));
-  print(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 5, 0));
+  // print(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 5, 0));
+  Recursions().triangle(4, 0);
 }
