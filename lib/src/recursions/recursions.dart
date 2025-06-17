@@ -69,7 +69,7 @@ class Recursions {
     }
   }
 
-  List<int> bubble(List<int> nums, int r, int c) {
+  List<int> bubbleSort(List<int> nums, int r, int c) {
     if (r == 0) {
       return nums;
     }
@@ -82,10 +82,10 @@ class Recursions {
         nums[c + 1] = temp;
       }
 
-      return bubble(nums, r, c + 1);
+      return bubbleSort(nums, r, c + 1);
     }
 
-    return bubble(nums, r - 1, 0);
+    return bubbleSort(nums, r - 1, 0);
   }
 }
 

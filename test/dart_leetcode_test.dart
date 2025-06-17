@@ -39,7 +39,7 @@ void main() {
 
     test("Bubble sort", () {
       List<int> nums = [4, 3, 2, 1];
-      expect(Recursions().bubble(nums, nums.length - 1, 0), [1, 2, 3, 4]);
+      expect(Recursions().bubbleSort(nums, nums.length - 1, 0), [1, 2, 3, 4]);
     });
 
     // test("Draw a triangle", () {
