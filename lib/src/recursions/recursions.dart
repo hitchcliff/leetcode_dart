@@ -88,6 +88,7 @@ class Recursions {
     return bubbleSort(nums, r - 1, 0);
   }
 
+  // max = index from nums
   List<int> selectionSort(List<int> nums, int row, int col, int max) {
     if (row == 0) {
       return nums;
@@ -103,11 +104,11 @@ class Recursions {
       }
     } else {
       // if done searching every cols
-      // swap
+      // swap maxes
       int temp = nums[max]; // put it on temp first
-      // put the max position to the last row
+      // update last max to previous max
       nums[max] = nums[row - 1];
-      // update the last row check (4-1 = 3 index) to max
+      // update the last row max
       nums[row - 1] = temp;
       return selectionSort(nums, row - 1, 0, 0);
     }
