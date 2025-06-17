@@ -68,6 +68,25 @@ class Recursions {
       triangle(row - 1, 0);
     }
   }
+
+  List<int> bubble(List<int> nums, int r, int c) {
+    if (r == 0) {
+      return nums;
+    }
+
+    if (c < r) {
+      if (nums[c] > nums[c + 1]) {
+        // swap
+        int temp = nums[c];
+        nums[c] = nums[c + 1];
+        nums[c + 1] = temp;
+      }
+
+      return bubble(nums, r, c + 1);
+    }
+
+    return bubble(nums, r - 1, 0);
+  }
 }
 
 main() {

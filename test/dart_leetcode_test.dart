@@ -37,6 +37,11 @@ void main() {
       expect(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 2, 0), []);
     });
 
+    test("Bubble sort", () {
+      List<int> nums = [4, 3, 2, 1];
+      expect(Recursions().bubble(nums, nums.length - 1, 0), [1, 2, 3, 4]);
+    });
+
     // test("Draw a triangle", () {
     //   expect(Recursions().triangle(4, 0, [], 0), [
     //     ["*", "*", "*", "*"],
