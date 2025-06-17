@@ -87,6 +87,31 @@ class Recursions {
 
     return bubbleSort(nums, r - 1, 0);
   }
+
+  List<int> selectionSort(List<int> nums, int row, int col, int max) {
+    if (row == 0) {
+      return nums;
+    }
+
+    // check every columns
+    if (col < row) {
+      // check if current num is > next num
+      if (nums[col] > nums[max]) {
+        return selectionSort(nums, row, col + 1, col);
+      } else {
+        return selectionSort(nums, row, col + 1, max);
+      }
+    } else {
+      // if done searching every cols
+      // swap
+      int temp = nums[max]; // put it on temp first
+      // put the max position to the last row
+      nums[max] = nums[row - 1];
+      // update the last row check (4-1 = 3 index) to max
+      nums[row - 1] = temp;
+      return selectionSort(nums, row - 1, 0, 0);
+    }
+  }
 }
 
 main() {

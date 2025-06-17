@@ -42,6 +42,11 @@ void main() {
       expect(Recursions().bubbleSort(nums, nums.length - 1, 0), [1, 2, 3, 4]);
     });
 
+    test("Selection sort", () {
+      List<int> nums = [4, 3, 2, 1];
+      expect(Recursions().selectionSort(nums, nums.length, 0, 0), [1, 2, 3, 4]);
+    });
+
     // test("Draw a triangle", () {
     //   expect(Recursions().triangle(4, 0, [], 0), [
     //     ["*", "*", "*", "*"],
