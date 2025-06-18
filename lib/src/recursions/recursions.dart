@@ -118,5 +118,7 @@ class Recursions {
 main() {
   // print(Recursions().sortedOrNot([1, 2, 3, 4, 5, 8, 10, 1], 0));
   // print(Recursions().findIndexes2([5, 4, 5, 8, 5, 1], 5, 0));
-  Recursions().triangle(4, 0);
+  // Recursions().triangle(4, 0);
+  // List<int> nums = [4, 3, 2, 1];
+  // Recursions().selectionSort(nums, nums.length, 0, 0);
 }
