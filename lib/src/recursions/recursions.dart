@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 
 class Recursions {
@@ -113,6 +114,56 @@ class Recursions {
       return selectionSort(nums, row - 1, 0, 0);
     }
   }
+
+  // Merge two sorted arrays
+  List<int> mergeSort(List<int> first, List<int> second) {
+    List<int> output = List.filled(first.length + second.length, 0);
+
+    int i = 0;
+    int j = 0;
+    int k = 0;
+
+    while (i < first.length && j < second.length) {
+      if (first[i] < second[j]) {
+        output[k] = first[i];
+        i++;
+      } else {
+        output[k] = second[j];
+        j++;
+      }
+      k++;
+    }
+
+    // if there is an extra numbers in the array
+    while (i < first.length) {
+      output[k] = first[i];
+      i++;
+      k++;
+    }
+
+    while (j < second.length) {
+      output[k] = second[j];
+      j++;
+      k++;
+    }
+
+    return output;
+  }
+
+  List<int> mergeTwoSortedArrays(List<int> arr) {
+    if (arr.length == 1) {
+      return arr;
+    }
+
+    int mid = (arr.length / 2).truncate();
+
+    List<int> left = mergeTwoSortedArrays(arr.getRange(0, mid).toList());
+    List<int> right = mergeTwoSortedArrays(
+      arr.getRange(mid, arr.length).toList(),
+    );
+
+    return mergeSort(left, right);
+  }
 }
 
 main() {
@@ -121,4 +172,6 @@ main() {
   // Recursions().triangle(4, 0);
   // List<int> nums = [4, 3, 2, 1];
   // Recursions().selectionSort(nums, nums.length, 0, 0);
+  List<int> arr = [5, 4, 3, 2, 1];
+  Recursions().mergeTwoSortedArrays(arr);
 }
