@@ -164,6 +164,8 @@ class Recursions {
 
     return mergeSort(left, right);
   }
+
+  /// TO DO: Quick sort
 }
 
 main() {
@@ -173,5 +175,5 @@ main() {
   // List<int> nums = [4, 3, 2, 1];
   // Recursions().selectionSort(nums, nums.length, 0, 0);
   List<int> arr = [5, 4, 3, 2, 1];
-  Recursions().mergeTwoSortedArrays(arr);
+  // Recursions().mergeTwoSortedArrays(arr);
 }

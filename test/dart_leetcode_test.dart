@@ -3,6 +3,7 @@ import 'package:dart_leetcode/src/solutions/1.%20Two%20Sums.dart';
 import 'package:dart_leetcode/src/factorial.dart';
 import 'package:dart_leetcode/src/solutions/120.%20Triangle.dart';
 import 'package:dart_leetcode/src/solutions/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.dart';
+import 'package:dart_leetcode/src/solutions/22.%20Generate%20Parentheses.dart';
 import 'package:dart_leetcode/src/solutions/33.%20Search%20in%20Rotated%20Sorted%20Array.dart';
 import 'package:test/test.dart';
 
@@ -107,6 +108,16 @@ void main() {
       //   ]),
       //   -1,
       // );
+    });
+
+    test("22. Generate Parentheses", () {
+      expect(GenerateParentheses().generateParenthesis(3), [
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()",
+      ]);
     });
   });
 }
