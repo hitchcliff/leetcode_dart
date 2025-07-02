@@ -5,6 +5,7 @@ import 'package:dart_leetcode/src/solutions/120.%20Triangle.dart';
 import 'package:dart_leetcode/src/solutions/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero.dart';
 import 'package:dart_leetcode/src/solutions/22.%20Generate%20Parentheses.dart';
 import 'package:dart_leetcode/src/solutions/33.%20Search%20in%20Rotated%20Sorted%20Array.dart';
+import 'package:dart_leetcode/src/solutions/739.%20Daily%20Temperatures.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -118,6 +119,19 @@ void main() {
         "()(())",
         "()()()",
       ]);
+    });
+
+    test("739. Daily Temperatures", () {
+      List<int> temperatures = [73, 74, 75, 71, 69, 72, 76, 73];
+      List<int> output = [1, 1, 4, 2, 1, 1, 0, 0];
+      List<int> temperatures2 = [30, 40, 50, 60];
+      List<int> output2 = [1, 1, 1, 0];
+      List<int> temperatures3 = [30, 60, 90];
+      List<int> output3 = [1, 1, 0];
+
+      expect(dailyTemperatures(temperatures), output);
+      expect(dailyTemperatures(temperatures2), output2);
+      expect(dailyTemperatures(temperatures3), output3);
     });
   });
 }
